@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Mini Games — Home</title>
+  <meta name="description" content="Homepagina voor mijn browsergames: idle games en kleine webgames. Speel direct in je browser." />
+  <!-- Basic Content Security Policy to keep the site safe (only allows scripts/styles/images from same origin) -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
+  <style>
+    :root{--bg:#071127;--card:#0b1220;--accent:#06b6d4;--text:#e6eef6}
+    body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:linear-gradient(180deg,#071127,#071a2b);color:var(--text)}
+    .wrap{max-width:980px;margin:28px auto;padding:18px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    h1{margin:0;font-size:20px}
+    .lead{color:#9fb8c4}
+    .grid{display:grid;grid-template-columns:1fr 280px;gap:18px;margin-top:18px}
+    .card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.5)}
+    .games-list{display:flex;flex-direction:column;gap:10px}
+    .game{display:flex;justify-content:space-between;align-items:center;padding:10px;border-radius:8px;background:linear-gradient(90deg,rgba(255,255,255,0.02),transparent)}
+    .btn{background:linear-gradient(90deg,var(--accent),#1fb6ff);border:none;padding:8px 10px;border-radius:8px;color:#022;cursor:pointer}
+    footer{margin-top:18px;color:#8aa6b5;font-size:13px;text-align:center}
+    a{color:inherit}
+    .small{font-size:13px;color:#9fb8c4}
+    pre{white-space:pre-wrap;background:#061423;padding:10px;border-radius:8px;overflow:auto}
+    @media(max-width:880px){.grid{grid-template-columns:1fr} .small-hide{display:none}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>My Mini Games</h1>
+        <div class="lead">Een verzameling eenvoudige browsergames — direct speelbaar, veilig en snel.</div>
+      </div>
+      <div class="small">Gemaakt door jou — host via GitHub Pages</div>
+    </header>
+
+    <div class="grid">
+      <main>
+        <div class="card">
+          <h3>Speel direct</h3>
+          <div class="small">Kies een game uit de lijst en klik op &quot;Speel&quot;. De games staan als losse HTML-bestanden in deze site.</div>
+
+          <div class="games-list" style="margin-top:12px">
+            <div class="game"><div><strong>Football Idle</strong><div class="small">Idle clicker — verzamel spelers</div></div><div><a class="btn" href="football-idle-game.html">Speel</a></div></div>
+            <div class="game"><div><strong>Voorbeeld Game 2</strong><div class="small">Coming soon</div></div><div><button class="btn" disabled>Speel</button></div></div>
+          </div>
+
+          <hr style="margin:12px 0;border:none;border-top:1px solid rgba(255,255,255,0.04)">
+          <h4>Installatie (kort)</h4>
+          <ol class="small">
+            <li>Upload deze bestanden naar een GitHub repo (index.html + game-bestanden).</li>
+            <li>Activeer GitHub Pages (Settings → Pages → kies branch 'main' en root '/').</li>
+            <li>Je site is bereikbaar via https://&lt;gebruikersnaam&gt;.github.io/&lt;repo&gt;/</li>
+          </ol>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h3>Veiligheid & privacy</h3>
+          <div class="small">Gebruik alleen client-side opslag (localStorage) voor saves en verzamel geen persoonlijke data. GitHub Pages serveert via HTTPS automatisch.</div>
+          <div style="margin-top:8px">Content Security Policy is ingesteld via &lt;meta&gt; tag om externe scripts te blokkeren.</div>
+        </div>
+
+      </main>
+
+      <aside>
+        <div class="card">
+          <h4>Snelle GitHub Pages handleiding</h4>
+          <div class="small" style="margin-top:8px">De snelste manier (web):</div>
+          <pre class="small">1. Maak een GitHub account (github.com). 
+2. Maak een nieuwe repository (naam: mijn-games).
+3. Klik op "Add file" → "Upload files" en sleep je index.html en game .html(s) in.
+4. Commit changes.
+5. Ga naar Settings → Pages → Source: branch 'main' (root) → Save.
+6. Wacht enkele minuten; site is live op https://&lt;gebruikersnaam&gt;.github.io/&lt;repo&gt;/</pre>
+          <div style="margin-top:8px" class="small">Of gebruik Git (voor wie Git kent):</div>
+          <pre class="small">git init
+git add .
+git commit -m "initial"
+git branch -M main
+git remote add origin https://github.com/gebruikersnaam/reponame.git
+git push -u origin main</pre>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h4>Geld verdienen (kort)</h4>
+          <div class="small">Enkele veilige opties:</div>
+          <ul class="small">
+            <li>Donatieknop: Ko-fi / Buy Me a Coffee</li>
+            <li>Betaalde premium builds (let op leeftijdsregels voor betaalproviders)</li>
+            <li>Advertenties (pas vanaf wanneer je 18+ bent en voldoet aan voorwaarden)</li>
+          </ul>
+        </div>
+
+      </aside>
+    </div>
+
+    <footer>
+      <div class="small">Veel succes! Als je wil, kan ik deze index.html aanpassen (stijl, extra games, custom domain-instructies).</div>
+    </footer>
+  </div>
+</body>
+</html>
